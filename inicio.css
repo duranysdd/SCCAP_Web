@@ -8,7 +8,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    margin-top: 0; /* Reset margin-top */
+    margin-top: 0; 
 }
 
 .container {
@@ -112,7 +112,7 @@ body {
 
 .WaterLight .Water-group img {
     width: 100%;
-    max-width: 100%; /* Change max-width to 100% */
+    max-width: 100%;
 }
 
 .blog {
