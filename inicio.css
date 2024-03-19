@@ -1,33 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
-body{
-    background-color: #cdd6f3;
-    /*esto es para ordenar las cosas de la pagina*/
+body {
+    font-family: "Poppins", sans-serif;
+    margin-top: 0; /* Reset margin-top */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/agua-fondo-1.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
+    border-radius: 6px;
+    position: relative;
 }
 
-#titulo {
-    background-color: #625be8;
-    height: 70px;
-    width: 1400px;
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.082); 
+    padding: 10px 0;
 }
 
-p.texto{
-    align-items: center;
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 16px;
+    padding: 20px;
+    color: aliceblue;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #007ea7;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+    color: aliceblue;
+    z-index: 1; 
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.header-content p {
+    font-size: 16px;
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.WaterLight {
+    padding: 20px 0;
+}
+
+.WaterLight .Water-content {
+    text-align: center;
+}
+
+.WaterLight h2 {
+    margin-bottom: 20px;
+}
+
+.WaterLight .Water-group {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.WaterLight .Water-group img {
+    width: 100%;
+    max-width: 100%; /* Change max-width to 100% */
+}
+
+.blog {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.blog h2 {
+    margin-bottom: 20px;
+}
+
+.blog .blog-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog .blog-content .blog-1 {
+    text-align: center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+}
+
+.blog .blog-content .blog-1 img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.general {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.general h2 {
+    margin-bottom: 20px;
+}
+
+.general .general-1 {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image-container img {
+    width: 400px; 
+    height: auto;
+}
+
+.footer {
+    background-color: #00171f;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+/* .footer .link {
+    margin-bottom: 20px;
+}
+
+.footer .link h3 {
+    margin-bottom: 10px; */
+/* }
+
+.footer .link ul {
     padding-left: 0;
 }
 
+.footer .link ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer .link ul li:last-child {
+    margin-right: 0;
+} */
