@@ -10,33 +10,25 @@
 <body>
 
     <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form>
-                <h1>WaterLight</h1>
-                <h2>Crea tu cuenta</h2>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                </div>
-                <span>Ingresa tus datos</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
-            </form>
-        </div>
         <div class="form-container sign-in">
-            <form>
-                <h1>Login</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                </div>
-                <span>Ingresa tu correo electrónico y contraseña</span>
+            <form id="registration-form" onsubmit="return validateForm()">
+                <h1>Registrate</h1>
+                <span>Ingresa aqui tus datos personales</span>
+                <input type="text" placeholder="Nombre(s)">
+                <input type="text" placeholder="Apellido Paterno">
+                <input type="text" placeholder="Apellido Materno">
+                <input type="number" pattern="[0-9]*" placeholder="Edad">
+                <input type="text" onkeypress='return validaNumericos(event)'/ placeholder="Telefono">
                 <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#" class="button">¿Olvidaste tu contraseña?</a>
-                <a id="login" href="./inicio.html">Login</a>
+                <input type="password" placeholder="Contraseña">
+
+                <div id="terminosCondiciones">
+                    <input type="checkbox" id="aceptoTerminos">
+                    <label for="aceptoTerminos"><a href="Login.html" target="_blank">Acepto Términos y Condiciones</a></label>
+                </div>
+
+                <button type="submit">Registrarse</button>
+
             </form>
         </div>
         <div class="toggle-container">
@@ -45,18 +37,35 @@
                     <h1>Bienvenido a WaterLight!</h1>
                     <p>Ingresa tus datos personales para utilizar todas las funciones del sitio</p>
                     <button class="hidden" id="login">Login</button>
-                </div>
+                    </div>
                 <div class="toggle-panel toggle-right">
                     <h1>WaterLight</h1>
                     <p>Regístrate con tus datos personales para utilizar todas las funciones del sitio</p>
-                    <button class="hidden" id="register" >Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <script src="script.js"></script>
+    <script>
+        function validateForm() {
+            var checkbox = document.getElementById("aceptoTerminos");
+            if (!checkbox.checked) {
+                alert("Debes aceptar los términos y condiciones para registrarte.");
+                return false; // Evita que el formulario se envíe
+            }
+            return true; // Permite que el formulario se envíe si se ha marcado el checkbox
+        }
+
+        function validaNumericos(event) {
+            if(event.charCode >= 41 && event.charCode <= 57){
+                return true;
+            }
+            return false;
+        }
+
+
+    </script>
 
 </body>
 </html>
