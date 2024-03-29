@@ -48,25 +48,8 @@
     </div>
 
 
-    <script>
-        function validateForm() {
-            var checkbox = document.getElementById("aceptoTerminos");
-            if (!checkbox.checked) {
-                alert("Debes aceptar los términos y condiciones para registrarte.");
-                return false; // Evita que el formulario se envíe
-            }
-            return true; // Permite que el formulario se envíe si se ha marcado el checkbox
-        }
+    <script src="/js/script.js" type="module"></script>
 
-        function validaNumericos(event) {
-            if(event.charCode >= 41 && event.charCode <= 57){
-                return true;
-            }
-            return false;
-        }
-
-
-    </script>
-
+    
 </body>
 </html>
