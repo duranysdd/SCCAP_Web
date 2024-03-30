@@ -5,6 +5,7 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
+
 function validateForm() {
     var checkbox = document.getElementById("aceptoTerminos");
     if (!checkbox.checked) {
@@ -14,9 +15,19 @@ function validateForm() {
     return true; // Permite que el formulario se envíe si se ha marcado el checkbox
 }
 
+//esto permite validar la edad
+function validaEdad(event) {
+    if(event.charCode >= 41 && event.charCode <= 57){
+        return true;
+    }
+    return false;
+}
+
+//esto permite validar el numero de telefono
 function validaNumericos(event) {
     if(event.charCode >= 41 && event.charCode <= 57){
         return true;
     }
     return false;
 }
+

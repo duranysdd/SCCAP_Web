@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/Login.css">
+    <link rel="stylesheet" href="/css/Registro.css">
     <title>Registro</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <input type="text" placeholder="Nombre(s)">
                 <input type="text" placeholder="Apellido Paterno">
                 <input type="text" placeholder="Apellido Materno">
-                <input type="number" pattern="[0-9]*" placeholder="Edad">
+                <input type="text" onkeypress='return validaEdad(event)'/ placeholder="Edad">
                 <input type="text" onkeypress='return validaNumericos(event)'/ placeholder="Telefono">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Contraseña">
@@ -41,19 +41,13 @@
                     </div>
                 <div class="toggle-panel toggle-right">
                     <h1>WaterLight</h1>
-                    <p>Crea una cuenta para usar todos los beneficios de WaterLight en nuestra app</p>
+                    <p>Crea tu cuenta para usar todos los beneficios de WaterLight en nuestra app</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="/script.js"></script>
 
-<<<<<<< HEAD:Login.html
-    <script src="./script.js"></script>
-=======
-    <script src="/js/script.js" type="module"></script>
->>>>>>> 1f5d9834c850cbe96e33bfb771b013d7b8bc55ab:html/Login.html
-
-    
 </body>
 </html>
