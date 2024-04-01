@@ -1,17 +1,17 @@
  // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
- // TODO: Add SDKs for Firebase products that you want to use
- // https://firebase.google.com/docs/web/setup#available-libraries
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
- // Your web app's Firebase configuration
-const firebaseConfig = {
-apiKey: "AIzaSyBydhUBN3eVyiqGxRn_t14Ktvr_lkd8Oe0",
-authDomain: "sccap-ce09d.firebaseapp.com",
-projectId: "sccap-ce09d",
-storageBucket: "sccap-ce09d.appspot.com",
-messagingSenderId: "614631620018",
-appId: "1:614631620018:web:ff202cb000008a28a2f8ab"
-};
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDBVSgdW3Sd5eXOgU4Wmym348_ZesCadsc",
+    authDomain: "sccapwl-9fc3d.firebaseapp.com",
+    projectId: "sccapwl-9fc3d",
+    storageBucket: "sccapwl-9fc3d.appspot.com",
+    messagingSenderId: "50419247622",
+    appId: "1:50419247622:web:ce8dd9ea50923f7caf3187"
+  };
 
- // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
