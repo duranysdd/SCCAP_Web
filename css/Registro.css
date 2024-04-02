@@ -203,13 +203,10 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
-    /* Estilos para pantallas de hasta 600px de ancho */
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Estilos para pantallas entre 601px y 1024px de ancho */
 }
 
 @media only screen and (min-width: 1025px) {
-    /* Estilos para pantallas de 1025px de ancho o más */
 }
