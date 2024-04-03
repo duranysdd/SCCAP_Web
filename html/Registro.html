@@ -12,34 +12,30 @@
 
     <div class="container" id="container">
         <div class="form-container sign-in">
-            <form id="registration-form" onsubmit="return validateForm()">
-                <h1>Registrate</h1>
-                <span>Ingresa aqui tus datos personales</span>
-                <input type="text" placeholder="Nombre(s)">
-                <input type="text" placeholder="Apellido Paterno">
-                <input type="text" placeholder="Apellido Materno">
-                <input type="text" onkeypress='return validaEdad(event)'/ placeholder="Edad">
-                <input type="text" onkeypress='return validaNumericos(event)'/ placeholder="Telefono">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Contraseña">
-
-                <div id="terminosCondiciones">
-                    <input type="checkbox" id="aceptoTerminos">
-                    <label for="aceptoTerminos"><a href="Login.html" target="_blank">Acepto Términos y Condiciones</a></label>
-                </div>
-
-                <button type="submit">Registrarse</button>
-
+            <form id="registration-form">
+                <h1>Regístrate</h1>
+                <span>Ingresa tus datos</span>
+                <br>
+                <input type="text" id="nombreInput" placeholder="Nombre(s)">
+                <input type="text" id="apellidoPaternoInput" placeholder="Apellido Paterno">
+                <input type="text" id="apellidoMaternoInput" placeholder="Apellido Materno">
+                <input type="text" id="edadInput" onkeypress='return validaEdad(event)' placeholder="Edad">
+                <input type="text" id="telefonoInput" onkeypress='return validaNumericos(event)' placeholder="Telefono">
+                <input type="email" id="emailInput" placeholder="Email">
+                <input type="password" id="passwordInput" placeholder="Contraseña">
+                <button type="button" onclick="submitForm()">Registrarse</button>
+                <br>
+                <div id="error-message">Por favor, completa todos los campos.</div>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                <!-- No encuentro la funcion de esto
+                    <!-- No encuentro la funcion de esto
                     <h1>Bienvenido a WaterLight!</h1>
                     <p>Ingresa tus datos personales para utilizar todas las funciones del sitio</p> -->
                     <button class="hidden" id="login">Login</button>
-                    </div>
+                </div>
                 <div class="toggle-panel toggle-right">
                     <h1>WaterLight</h1>
                     <p>Crea tu cuenta para usar todos los beneficios de WaterLight en nuestra app</p>
@@ -48,7 +44,9 @@
         </div>
     </div>
 
-    <script src="/js/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/avisos.js"></script>
 
 </body>
 </html>

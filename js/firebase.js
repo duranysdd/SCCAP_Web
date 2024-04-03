@@ -10,8 +10,8 @@
     projectId: "sccapwl-9fc3d",
     storageBucket: "sccapwl-9fc3d.appspot.com",
     messagingSenderId: "50419247622",
-    appId: "1:50419247622:web:ce8dd9ea50923f7caf3187"
+    appId: "1:50419247622:web:8e6ed66471efa1d0af3187"
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  export const app = initializeApp(firebaseConfig);
