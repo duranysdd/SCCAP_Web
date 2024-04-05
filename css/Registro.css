@@ -210,3 +210,9 @@ body{
 
 @media only screen and (min-width: 1025px) {
 }
+
+#error-message{
+    display: none;
+    color: red;
+    font-size: 13.5px;
+}
