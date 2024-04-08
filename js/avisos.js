@@ -15,12 +15,11 @@ async function submitForm(e) {
         
         alert("¡Cuenta creada con éxito!");
 
-        // Redirigir a la página de inicio
-        window.location.href = "/html/";
+
+        window.location.href = "../html/descarga.html";
     } catch (error) {
         console.log(error);
     }
 }
 
-// Agregar evento de envío al formulario
 form.addEventListener('submit', submitForm);
