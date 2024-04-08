@@ -1,35 +1,26 @@
-function submitForm() {
-    var nombre = document.getElementById("nombreInput").value.trim();
-    var apellidoPaterno = document.getElementById("apellidoPaternoInput").value.trim();
-    var apellidoMaterno = document.getElementById("apellidoMaternoInput").value.trim();
-    var edad = document.getElementById("edadInput").value.trim();
-    var telefono = document.getElementById("telefonoInput").value.trim();
-    var email = document.getElementById("emailInput").value.trim();
-    var password = document.getElementById("passwordInput").value.trim();
+const form = document.getElementById('registration-form');
 
-    if (nombre === '' || apellidoPaterno === '' || apellidoMaterno === '' || edad === '' || telefono === '' || email === '' || password === '') {
-        document.getElementById("error-message").style.display = 'block';
-    } else {
-        document.getElementById("error-message").style.display = 'none';
-        // Aquí puedes enviar el formulario o realizar cualquier otra acción que necesites
-        // document.getElementById("registration-form").submit();
+
+async function submitForm(e) {
+    e.preventDefault(); 
+
+    const email = form.elements['emailInput'].value;
+    const password = form.elements['passwordInput'].value;
+
+    try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        console.log(user);
+
+        
+        alert("¡Cuenta creada con éxito!");
+
+        // Redirigir a la página de inicio
+        window.location.href = "/html/";
+    } catch (error) {
+        console.log(error);
     }
 }
 
-function validaEdad(event) {
-    var keyCode = event.keyCode;
-    if ((keyCode < 48 || keyCode > 57) && keyCode !== 8) {
-        event.preventDefault();
-        return false;
-    }
-    return true;
-}
-
-function validaNumericos(event) {
-    var keyCode = event.keyCode;
-    if ((keyCode < 48 || keyCode > 57) && keyCode !== 8 && keyCode !== 32) {
-        event.preventDefault();
-        return false;
-    }
-    return true;
-}
+// Agregar evento de envío al formulario
+form.addEventListener('submit', submitForm);
