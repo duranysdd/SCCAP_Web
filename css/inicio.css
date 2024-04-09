@@ -116,6 +116,11 @@ body {
     text-align: left;
 }
 
+.WaterLight .Water-nosotros {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
 .WaterLight .Water-group img {
     width: 100%;
     max-width: 100%;
@@ -161,6 +166,12 @@ body {
     width: calc(50% - 20px);
 }
 
+.normas-title {
+    text-align: center;
+    padding: 30px 0;
+    font-size: large;
+}
+
 .small-cards {
     display: flex;
     justify-content: space-between;
@@ -168,7 +179,7 @@ body {
 }
 
 .small-card {
-    background-color: #f2f2f2;
+    background-color: #007ea7;
     border-radius: 10px;
     padding: 15px;
     width: calc(25% - 20px);
@@ -177,26 +188,37 @@ body {
 
 .small-card img {
     width: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .small-card h4 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
+.importance-info {
+    text-align: center;
+}
+
+.importance-info a {
+    text-decoration: underline;
+    text-align: center;
+    color: #00171f;
+    font-size: 16px;
+}
+
 .small-card p {
-    color: blue; 
+    color: white;
     text-decoration: underline;
     cursor: pointer;
 }
 
 .small-card p:hover {
-    color: darkblue; 
+    color: #fff;
 }
 
 .card {
-    background-color: #052c46d7;
+    background-color: transparent;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -205,23 +227,26 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(6, 12, 87, 0.3);
+    background-image: linear-gradient(rgba(10, 21, 165, 0.1), rgba(255, 255, 255, 0.8));
 }
 
 .card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .card h2 {
-    color: #e7ebf0;
-    font-size: 25px;
+    color: #03030385;
+    font-size: 20px;
     margin-bottom: 13px;
 }
 
 .card p {
-    color: #ffffff;
-    font-size: 12px;
+    color: #504c4c;
+    font-size: 15px;
     flex-grow: 1.5;
     text-align: justify;
 }
@@ -237,10 +262,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.column {
-    flex: 1;
 }
 
 .link {
@@ -281,10 +302,12 @@ body {
     color: white;
     font-size: 14px;
 }
-@media (max-width: 767px) {
+
+@media (max-width: 700px) {
     .menu {
         padding: 10px 0;
     }
+
     .menu .navbar {
         display: none;
         width: 100%;
@@ -294,50 +317,62 @@ body {
         top: 100%;
         left: 0;
     }
+
     .menu .navbar ul {
         display: block;
     }
+
     .menu .navbar ul li {
         float: none;
         display: block;
     }
+
     .menu-label {
         display: block;
         cursor: pointer;
     }
-}
 
-/* tablets*/
-@media (min-width: 768px) and (max-width: 1200px) {
-    .container {
-        padding: 0 20px;
-    }
-    .small-cards {
-        flex-wrap: wrap;
-    }
     .small-card {
         width: calc(50% - 20px);
         margin-bottom: 20px;
     }
 }
 
-/* laptops*/
-@media (min-width: 1201px) {
+@media (min-width: 700px) and (max-width: 1000px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .small-cards {
+        flex-wrap: wrap;
+    }
+
+    .small-card {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
     .menu .navbar {
         display: flex;
         width: auto;
         background-color: transparent;
         position: static;
     }
+
     .menu .navbar ul {
         display: flex;
     }
+
     .menu .navbar ul li {
         float: none;
     }
+
     .menu .navbar ul li a {
         padding: 20px;
     }
+
     .menu-label {
         display: none;
     }
