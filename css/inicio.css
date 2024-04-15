@@ -16,6 +16,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; /* Añade un poco de espacio a los lados en dispositivos más pequeños */
 }
 
 .header {
@@ -40,14 +41,18 @@ body {
     justify-content: space-between;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.336);
-    padding: 10px 0;
+    padding: 10px 20px; /* Aumenta el espacio alrededor del botón */
 }
 
 .logo {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 24px; /* Aumenta el tamaño del logo */
     font-weight: 800;
-    margin-left: 20px;
+}
+
+.menu .navbar {
+    display: flex;
+    justify-content: center;
 }
 
 .menu .navbar ul {
@@ -61,7 +66,7 @@ body {
 
 .menu .navbar ul li a {
     font-size: 16px;
-    padding: 20px;
+    padding: 10px 20px; /* Modificado para mayor espacio */
     color: aliceblue;
     display: block;
     font-weight: 600;
@@ -71,13 +76,13 @@ body {
     color: #007ea7;
 }
 
-#menu {
-    display: none;
-}
-
 .menu-label {
     cursor: pointer;
-    display: none;
+    display: none; /* Oculta el botón del menú por defecto */
+}
+
+#menu:checked + .menu-label + .navbar {
+    display: block; /* Muestra el menú al hacer clic en el botón */
 }
 
 .header-content {
@@ -122,8 +127,8 @@ body {
 }
 
 .WaterLight .Water-group img {
-    width: 100%;
-    max-width: 100%;
+    width: 100%; /* Hace que la imagen sea completamente responsiva */
+    max-width: 100%; /* Garantiza que la imagen no se desborde */
 }
 
 .blog {
@@ -148,8 +153,8 @@ body {
 }
 
 .blog .blog-content .blog-1 img {
-    width: 100%;
-    max-width: 100%;
+    width: 100%; /* Hace que la imagen sea completamente responsiva */
+    max-width: 100%; /* Garantiza que la imagen no se desborde */
 }
 
 .general {
@@ -176,6 +181,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    flex-wrap: wrap; /* Añade un wrap para que los elementos se ajusten en pantallas pequeñas */
 }
 
 .small-card {
@@ -184,6 +190,7 @@ body {
     padding: 15px;
     width: calc(25% - 20px);
     text-align: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar los elementos */
 }
 
 .small-card img {
@@ -233,7 +240,7 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 100%; /* Hace que la imagen sea completamente responsiva */
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -305,7 +312,7 @@ body {
 
 @media (max-width: 700px) {
     .menu {
-        padding: 10px 0;
+        padding: 10px 20px; /* Aumenta el espacio alrededor del botón */
     }
 
     .menu .navbar {

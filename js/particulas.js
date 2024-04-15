@@ -8,7 +8,7 @@ particlesJS("particles-js", {
         }
       },
       "color": {
-        "value": ["#ffffff", "#3498db"] // Colores blanco y azul
+        "value": ["#ffffff", "#34|||||||||||98db"] // Colores blanco y azul
       },
       "shape": {
         "type": "circle",
