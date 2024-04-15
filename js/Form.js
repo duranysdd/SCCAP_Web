@@ -22,16 +22,6 @@ formcontainer.addEventListener('submit', async (e) => {
         return;
     }
 
-    // Verificar si el nombre de usuario ya está en uso
-    const usernameQuery = query(collection(firestore, "usuarios"), where("username", "==", username));
-    const usernameSnapshot = await getDocs(usernameQuery);
-
-    if (!usernameSnapshot.empty) {
-        errorMessage.textContent = 'El nombre de usuario ya está en uso';
-        errorMessage.style.display = 'block';
-        return;
-    }
-
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
