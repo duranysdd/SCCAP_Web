@@ -13,7 +13,7 @@ formcontainer.addEventListener('submit', async (e) => {
     const password = formcontainer['passwordInput'].value;
 
     // Verificar si el correo electrónico ya está en uso
-    const emailQuery = query(collection(firestore, "usuarios"), where("email", "==", email));
+    const emailQuery = query(collection(firestore, "usuarios"), where("correoE_usuario", "==", email));
     const emailSnapshot = await getDocs(emailQuery);
 
     if (!emailSnapshot.empty) {
@@ -30,7 +30,7 @@ formcontainer.addEventListener('submit', async (e) => {
         const userDocRef = doc(firestore, "usuarios", user.uid);
 
         await setDoc(userDocRef, {
-            email: email,
+            correoE_usuario: email,
             username: username
         });
 
