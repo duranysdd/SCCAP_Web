@@ -7,30 +7,27 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/*esto es para darle color al cuerpo*/
-body{
+body {
     background-color: #ffffff;
     background: linear-gradient(to right, #ffffff, #ffffff);
-    /*esto es para ordenar las cosas de la pagina*/
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    /*esto es para centrar el cuadro*/
     height: 100vh;
+    margin: 0;
 }
 
-/*esto es para hacer el cuadro*/
 .container{
     background-color: #fff;
-    /*esto es para modificar los bordes del cuadro*/
-    border-radius: 30px;
+    margin-top: 100px; 
+    border-radius: 20px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 580px;
+    width: 90%;
+    max-width: 768px;
+    min-height: 400px; 
+    margin-bottom: 100px;
 }
 
 .container p{
@@ -44,7 +41,6 @@ body{
     font-size: 12px;
 }
 
-/*aqui es para ponerle color a los iconos*/
 .container a{
     color: #333;
     font-size: 13px;
@@ -194,29 +190,96 @@ body{
     transform: translateX(200%);
 }
 
-#terminosCondiciones {
-    margin-bottom: 10px;
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.336);
+    padding: 10px 0;
 }
 
-#registrarse{
-    background-color: #003459;
+.menu .navbar ul {
+    display: flex;
 }
 
-@media only screen and (max-width: 600px) {
+.menu .navbar ul li {
+    position: relative;
+    float: left;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+.menu .navbar ul li a {
+    font-size: 16px;
+    padding: 20px;
+    color: aliceblue;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-@media only screen and (min-width: 1025px) {
+.menu .navbar ul li a:hover {
+    color: #007ea7;
 }
 
-#error-message{
+#menu {
     display: none;
-    color: red;
-    font-size: 13.5px;
 }
 
-#error-message{
-    font-size: 15px;
+
+
+.menu .navbar {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.336);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.menu .navbar ul {
+    display: block;
+}
+
+.menu .navbar ul li {
+    float: none;
+    display: block;
+}
+
+@media (min-width: 1000px) {
+    .menu .navbar {
+        display: flex;
+        width: auto;
+        background-color: transparent;
+        position: static;
+    }
+
+    .menu .navbar ul {
+        display: flex;
+    }
+
+    .menu .navbar ul li {
+        float: none;
+    }
+
+    .menu .navbar ul li a {
+        padding: 20px;
+    }
+
+    .menu-label {
+        display: none;
+    }
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 20px;
+    text-decoration: none;
 }
