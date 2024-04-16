@@ -214,6 +214,11 @@ body {
     margin-left: 20px;
 }
 
+.menu{
+    display: flex;
+    flex-wrap: _____;
+}
+
 .menu .navbar ul {
     display: flex;
     text-decoration: none;
