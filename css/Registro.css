@@ -191,8 +191,9 @@ body {
 }
 
 
+
 .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -202,15 +203,27 @@ body {
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.336);
     padding: 10px 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 20px;
 }
 
 .menu .navbar ul {
     display: flex;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .menu .navbar ul li {
     position: relative;
     float: left;
+    text-decoration: none;
 }
 
 .menu .navbar ul li a {
@@ -224,32 +237,16 @@ body {
 
 .menu .navbar ul li a:hover {
     color: #007ea7;
+    text-decoration: none;
+    
 }
 
 #menu {
     display: none;
+    text-decoration: none;
 }
 
 
-
-.menu .navbar {
-    display: none;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.336);
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
-.menu .navbar ul {
-    display: block;
-}
-
-.menu .navbar ul li {
-    float: none;
-    display: block;
-}
 
 @media (min-width: 1000px) {
     .menu .navbar {
@@ -257,22 +254,33 @@ body {
         width: auto;
         background-color: transparent;
         position: static;
+        text-decoration: none;
     }
 
     .menu .navbar ul {
         display: flex;
+        text-decoration: none;
     }
-
+    
     .menu .navbar ul li {
-        float: none;
-    }
+        position: relative;
+        float: left;
+        text-decoration: none;
 
+    }
+    
     .menu .navbar ul li a {
+        font-size: 16px;
         padding: 20px;
+        color: aliceblue;
+        display: block;
+        font-weight: 600;
+        text-decoration: none;
     }
 
     .menu-label {
         display: none;
+        text-decoration: none;
     }
 }
 

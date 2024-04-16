@@ -18,18 +18,11 @@ body {
     }
 
     .menu {
-        padding: 20px; 
+        padding: 30px; 
     }
 
     .menu .navbar ul {
-        flex-direction: column; 
-        background-color: rgba(0, 0, 0, 0.636);
-        position: absolute; 
-        top: 60px; 
-        left: 0;
-        right: 0;
-        padding-top: 10px;
-        display: none; 
+        display: flex;
     }
 
     .menu .navbar ul.active {
@@ -37,12 +30,18 @@ body {
     }
 
     .menu .navbar ul li {
-        width: 100%; 
+        position: relative;
+        float: left;
+
     }
 
     .menu .navbar ul li a {
-        padding: 15px 20px; /* Reducir el padding del enlace */
-        text-align: center;
+        font-size: 16px;
+        padding: 20px;
+        color: aliceblue;
+        display: block;
+        font-weight: 600;
+
     }
 
     .logo {
@@ -71,7 +70,11 @@ body {
 /* Estilos para dispositivos de pantalla mediana */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .menu .navbar ul li a {
-        padding: 20px; /* Ajustar el padding del enlace */
+        font-size: 16px;
+        padding: 20px;
+        color: aliceblue;
+        display: block;
+        font-weight: 600; 
     }
 
     .footer-content {
@@ -120,17 +123,20 @@ body {
 
 /* Estilos para el menú de navegación */
 .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.336);
-    padding: 10px 20px;
-    width: 100%;
+    .menu {
+        position: fixed; /* Cambia a fixed */
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.336);
+        padding: 10px 20px;
+        width: 100%;
+    }
+    
 }
 
 .logo {
@@ -141,11 +147,16 @@ body {
 
 .menu .navbar ul {
     display: flex;
+    margin-right: 20px; /* Añade margen derecho para evitar que los elementos se superpongan */
 }
 
 .menu .navbar ul li {
     position: relative;
-    float: left;
+    margin-right: 20px; /* Añade margen derecho entre los elementos del menú */
+}
+
+.menu .navbar ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento del menú */
 }
 
 .menu .navbar ul li a {
@@ -154,6 +165,7 @@ body {
     color: aliceblue;
     display: block;
     font-weight: 600;
+    text-align: center; /* Centra el texto */
 }
 
 .menu .navbar ul li a:hover {
@@ -185,7 +197,6 @@ button.download-btn:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para el pie de página */
 /* Estilos para el pie de página */
 .footer {
     background-color: #00171f;
