@@ -204,6 +204,11 @@ body {
     padding: 10px 0;
 }
 
+.menu{
+    display: flex;
+    flex-wrap: _____;
+}
+
 .menu .navbar ul {
     display: flex;
 }
