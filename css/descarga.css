@@ -18,7 +18,16 @@ body {
     }
 
     .menu {
-        padding: 30px; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.336);
+        padding: 10px 0;
     }
 
     .menu .navbar ul {
@@ -32,7 +41,6 @@ body {
     .menu .navbar ul li {
         position: relative;
         float: left;
-
     }
 
     .menu .navbar ul li a {
@@ -41,16 +49,19 @@ body {
         color: aliceblue;
         display: block;
         font-weight: 600;
-
+        text-decoration: none;
     }
 
     .logo {
-        font-size: 18px; 
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 800;
+        margin-left: 20px;
     }
 
     .footer-content {
-        flex-direction: column; /* Cambiar la dirección del contenido del pie de página a vertical */
-        text-align: center; /* Centrar el texto */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .link {
@@ -74,7 +85,7 @@ body {
         padding: 20px;
         color: aliceblue;
         display: block;
-        font-weight: 600; 
+        font-weight: 600;
     }
 
     .footer-content {
@@ -91,8 +102,8 @@ body {
     }
 
     .register-instructions {
-        color: white; /* Cambiar el color del texto a blanco */
-        font-size: 20px; /* Ajustar el tamaño de fuente */
+        color: white; 
+        font-size: 20px; 
     }
 }
 
@@ -123,40 +134,25 @@ body {
 
 /* Estilos para el menú de navegación */
 .menu {
-    .menu {
-        position: fixed; /* Cambia a fixed */
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 2;
-        background-color: rgba(0, 0, 0, 0.336);
-        padding: 10px 20px;
-        width: 100%;
-    }
-    
-}
-
-.logo {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 800;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.336);
+    padding: 10px 0;
 }
 
 .menu .navbar ul {
     display: flex;
-    margin-right: 20px; /* Añade margen derecho para evitar que los elementos se superpongan */
 }
 
 .menu .navbar ul li {
     position: relative;
-    margin-right: 20px; /* Añade margen derecho entre los elementos del menú */
-}
-
-.menu .navbar ul li:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento del menú */
+    float: left;
 }
 
 .menu .navbar ul li a {
@@ -165,11 +161,18 @@ body {
     color: aliceblue;
     display: block;
     font-weight: 600;
-    text-align: center; /* Centra el texto */
+    text-decoration: none;
 }
 
 .menu .navbar ul li a:hover {
     color: #007ea7;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 20px;
 }
 
 /* Estilos para los elementos de la página */
